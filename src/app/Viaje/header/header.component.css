@@ -1,0 +1,43 @@
+.fondo{
+    background: #23074d;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #8a5040, #4f2e81);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #aa4b31, #57289c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1{ 
+    padding-top: 20px;
+    color:antiquewhite
+}
+input{
+    width: 34rem;
+}
+
+form{
+    margin-bottom: 40px;
+}
+
+label{
+    color:antiquewhite;
+    font-size: 30px;
+}
+
+.float-center{
+    margin-bottom: 40px;
+}
+
+.notError{
+
+    background:green
+}
+
+.error{
+   
+    background:red
+}
+
+i{
+    font-size: 32px;
+    margin-left : 10px;
+    background : rgb(134, 177, 206);
+    border-radius: 50%
+}

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "crudviaje": {
+      "hosting": {
+        "crudViaje": [
+          "crudviaje"
+        ]
+      }
+    }
+  }
+}

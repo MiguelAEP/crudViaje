@@ -1,0 +1,43 @@
+<div class= "fondo">
+    <h1 class="text-center">Registro de Pasajeros</h1>
+    <div class="container mt-5 d-flex justify-content-center">
+        <button (click)="openForm()"
+        class="btn btn-primary float-center btn-lg">Registrar Pasajero</button>
+    </div>
+       
+    <div *ngIf="registerPassenger"
+    class="container mt-5 d-flex justify-content-center">
+  
+        <form (ngSubmit)="send()" [formGroup]="miFormulario" >
+         
+            <label class="form-label" for=""> Nombre</label>
+            <span > <i class="fa fa-user-circle" 
+                [class.error]= "miFormulario.controls.nombre.invalid && miFormulario.controls.nombre.touched"
+                [class.notError]= "miFormulario.controls.nombre.valid "
+                ></i> </span>
+            <input  
+            formControlName="nombre"
+             type="text" class="form-control form-control-lg" placeholder="Ingrese Nombre">
+
+            <label class="form-label" for="">Email</label>
+            <span > <i class="fa fa-user-circle" [class.error]= "miFormulario.controls.email.invalid && miFormulario.controls.email.touched"
+                [class.notError]= "miFormulario.controls.email.valid "></i> </span>
+         
+            <input  formControlName="email"
+             type="text" class="form-control form-control-lg " placeholder="Ingrese Email">
+
+            <label class="form-label" for="">Pais Destino</label>
+            <span > <i class="fa fa-user-circle" [class.error]= "miFormulario.controls.paisDestino.invalid && miFormulario.controls.paisDestino.touched"
+                [class.notError]= "miFormulario.controls.paisDestino.valid"></i> </span>
+         
+            <input formControlName="paisDestino"
+            type="text" class="form-control form-control-lg" placeholder="Ingrese Pais Destino">
+            
+        
+            <button [disabled]="miFormulario.invalid" type="submit"
+             class="btn btn-primary btn-lg mt-3 float-end">SEND</button>
+
+        </form>
+    
+    </div>
+</div>

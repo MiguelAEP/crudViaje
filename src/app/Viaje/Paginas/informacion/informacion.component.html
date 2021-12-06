@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Emai</th>
+            <th scope="col">Pais destino</th>
+            <th scope="col">Editar / ELiminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let peoples of arrayPasajero ; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{peoples.nombre}}</td>
+            <td>{{peoples.email}}</td>
+            <td>{{peoples.paisDestino}}</td>
+            <td>
+                 <i (click)="editar(peoples)" class="fas fa-edit text-info"></i>
+                 <i (click)="eliminar(peoples.idd)" class="fas fa-trash text-danger"></i>
+                </td>
+         
+          </tr>
+   
+      </table>
+</div>
