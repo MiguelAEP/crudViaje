@@ -42,7 +42,7 @@ export class InformacionComponent implements OnInit {
     this.service.deletePeople(id).then(()=>{
       Swal.fire('Eliminaste un pasajero')
      },error=>{
-       console.log(error)
+       console.log(error+"error al eliminar")
      })
   }
 }
